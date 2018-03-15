@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        // log 日志
 //        NetworkActivityLogger.shared.startLogging()
 //        NetworkActivityLogger.shared.level = .error
-        
+        PromiseNetwork.networkLog = false
         
         //日志文件地址
         let cachePath = FileManager.default.urls(for: .cachesDirectory,

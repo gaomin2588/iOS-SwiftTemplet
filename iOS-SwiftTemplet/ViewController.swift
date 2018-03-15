@@ -14,26 +14,77 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
 
+    var allRegions = [Region]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        PromiseNetwork.networkLog = true
         
-        ClientManager.shared().sendGET(API.URL.kRegionGetRegionNext, ["parentId":4]).done(on: DispatchQueue.main) { (obj) in
-//            print("obj----\(obj)")
-            }.catch { (error) in
-//                print(error)
-        }
         
         
 
+        userGetRegionNext()
+
+        userLogin()
+    }
+    
+    
+    func userGetRegionNext() {
         
+        
+        ClientManager.shared().sendGET(API.IC.kRegionGetRegionNext, ["parentId":4]).done(on: DispatchQueue.main) {[weak self] (obj) in
+
+            let json = JSON(obj)
+            
+            let regions = json.array
+            
+            for region in regions!{
+                
+                let reg = Region(region)
+                
+                self?.allRegions.append(reg)
+                
+            }
+            
+            
+            
+            log.debug(self?.allRegions[0].name)
+            
+            }.catch { (error) in
+
+        }
 
         
     }
+    
+    func userLogin() {
+        
+        var params:Dictionary = [String:Any]()
+        params["qmobile"] = "18570040966"
+        params["qpassword"] = "gm123456"
+        
+        ClientManager.shared().sendRequest(.post, API.UC.kLogin, params).done(on: DispatchQueue.global()) { (obj) in
+            
+            
+            let json = JSON(obj)
+            
+            
+            let  user = User(json);
+            
+            log.debug(user.userDO?.personDO?.trueName ?? "")
+            
+            
+            
+            }.catch { (error) in
+                
+        }
+
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

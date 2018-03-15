@@ -14,7 +14,8 @@ class ClientManager: NSObject {
 
     class func shared()->PromiseNetwork{
         
-        let network = PromiseNetwork.sharedNormal
+        let network = PromiseNetwork.shared
+        
         
         network._parameterEnconding = URLEncoding.default
         

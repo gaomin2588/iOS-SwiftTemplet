@@ -19,7 +19,7 @@ typealias interceptor = (Any?)-> [String:Any]
 class PromiseNetwork: NSObject {
     
     
-    static let sharedNormal = PromiseNetwork()
+    static let shared = PromiseNetwork()
 
     // 是否打印log日志 默认为YES
     static var networkLog:Bool = true
