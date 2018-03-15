@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.7.0)
+  - AlamofireNetworkActivityLogger (2.3.0):
+    - Alamofire (~> 4.6)
+  - CryptoSwift (0.8.3)
+  - ESPullToRefresh (2.7)
+  - IQKeyboardManagerSwift (5.0.7)
+  - MBProgressHUD (1.1.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - ObjectMapper (3.1.0)
+  - PromiseKit (6.2.1):
+    - PromiseKit/CorePromise (= 6.2.1)
+    - PromiseKit/Foundation (= 6.2.1)
+    - PromiseKit/UIKit (= 6.2.1)
+  - PromiseKit/Alamofire (6.2.1):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.2.1)
+  - PromiseKit/Foundation (6.2.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.2.1):
+    - PromiseKit/CorePromise
+  - SnapKit (4.0.0)
+  - SwiftyBeaver (1.5.1)
+  - SwiftyJSON (4.0.0)
+  - XCGLogger (6.0.2):
+    - XCGLogger/Core (= 6.0.2)
+  - XCGLogger/Core (6.0.2):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireNetworkActivityLogger
+  - CryptoSwift
+  - ESPullToRefresh
+  - IQKeyboardManagerSwift
+  - MBProgressHUD
+  - ObjectMapper
+  - PromiseKit
+  - PromiseKit/Alamofire
+  - SnapKit
+  - SwiftyBeaver
+  - SwiftyJSON
+  - XCGLogger
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlamofireNetworkActivityLogger: 6f3076652ab7fa6c819b59be08ea038d339e36d8
+  CryptoSwift: 033efc3523865d19cc6ab6612fa17a62613b5dfa
+  ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PromiseKit: edaca6f0a7ed73b08c287600537d13867a7fabc7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
+
+PODFILE CHECKSUM: 3c5a128478d7d896114f48820c3987cb0adf52a9
+
+COCOAPODS: 1.4.0
